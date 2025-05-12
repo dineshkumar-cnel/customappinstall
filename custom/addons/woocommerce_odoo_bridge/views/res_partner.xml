@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_woo_customer_menu_hwe" model="ir.actions.act_window">
+            <field name="name">Customers</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('woo_id', '!=', False),('type', '=', 'contact')]</field>
+            <field name="context">{'create': False, 'edit': False, 'delete': False}</field>
+            <field name="help" type="html">
+                <p class="empty-folder-view">
+                    No Customers.
+                </p>
+            </field>
+        </record>
+
+        <record id="woo_customer_page_inherited_hwe" model="ir.ui.view">
+            <field name="name">res.partner.woo.page.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='internal_notes']" position="before">
+                    <page string="WooCommerce Information" name="wooinfo">
+                        <group string="Basic Information">
+                            <field name="woo_id"/>
+                            <field name="woo_user_name"/>
+                            <field name="instance_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+        <menuitem id="woo_customer_submenu_hwe" name="Customers"
+                  parent="woo_commerce_menu"
+                  action="action_woo_customer_menu_hwe"
+                  groups="base.group_user"/>
+    </data>
+</odoo>

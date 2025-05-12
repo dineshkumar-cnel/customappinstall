@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="woo_attribute_page_inherited_hwe" model="ir.ui.view">
+            <field name="name">product.attribute.woo.page.inherited</field>
+            <field name="model">product.attribute</field>
+            <field name="inherit_id" ref="product.product_attribute_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="WooCommerce Information" name="wooinfo">
+                        <group string="Basic Information">
+                            <field name="woo_id"/>
+                            <field name="instance_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="woo_wizard_form_view_hwe" model="ir.ui.view">
+            <field name="name">woo.wizard.form</field>
+            <field name="model">woo.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Connection" create="0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                            <field name="store_url"/>
+                        </div>
+
+                            <group string="Single Click Import Sync">
+                                <!-- Add tooltip (help) to the group -->
+                                <button name="sync_details" type="object" 
+                                        class="btn btn-secondary fa fa-refresh" 
+                                        aria-label="Sync Order Details" 
+                                        title="Pressing this button will perform a 1 way sync of customers, products and orders from WordPress WooCommerce to Odoo Bridge."
+                                        role="img">
+                                    <!-- Question mark icon for additional info -->
+                                </button>
+                            </group>
+
+                            <group string="Single Click Export Sync">
+                                <!-- Add tooltip (help) to the group -->
+                                <button name="export_sync_details" type="object" 
+                                        class="btn btn-secondary fa fa-refresh" 
+                                        aria-label="Sync export Details" 
+                                        title="Pressing this button will perform a 1 way sync of customers, products and orders from WordPress Odoo Bridge to WooCommerce."
+                                        role="img">
+                                    <!-- Question mark icon for additional info -->
+                                </button>
+                            </group>
+
+                        <group string="Product And Customers Import/Export">
+                            <group>
+                                <field name="product_check" widget="boolean_toggle" help="Choose the 'Product' radio button to import or export the product"/>
+                                <field name="customer_check" widget="boolean_toggle" help="Choose the 'Customer' radio button to import or export the Customer"/>
+                            </group>
+                            <group string="Orders Import/Export">
+                                <field name="order_check" widget="boolean_toggle" help="Choose the 'Order' radio button to import or export the order"/>
+                                <field name="start_date" help="Choose the start date from which you would like to receive order data."/>
+                                <field name="end_date" help="Choose the last date for receiving order data."/>
+                                <field name="order_status" help="From here, you can choose which order statuses to sync."/>
+                                <field name="sync_fun" invisible="1"/>
+                            </group>
+                        </group>
+                         
+                       <group>
+                        <div class="imp_exp_btn" style="display: flex; gap: 20px;">
+                            <field name="order_check" widget="boolean_toggle" invisible="1"/>
+                             <div class="import_btn">
+                             <div class="tooltip">This button will import products, orders, and customers from WordPress WooCommerce into the Odoo module when clicked.</div>
+                                <button name="get_woo_import" type="object" string="Import Data From WooCommerce" class="btn-info_imp" help="Clicking this button imports products, orders, and customers from WordPress into the WooCommerce model." style="font-size: 12px;">
+                                    Import Data From WooCommerce
+                                    <!-- Question mark icon inside button -->
+                                    <i class="fa fa-question-circle"></i>
+                                </button>
+                               
+                            </div>
+                      
+                            <div class="export_btn">
+                             <div class="tooltip">This button will export products, orders, and customers from the Odoo module to WordPress WooCommerce when clicked.</div>
+                                <button name="get_woo_export" type="object" string="   Export Data To WooCommerce" class="btn-info_imp" help="Clicking this button exports products, orders, and customers from the WooCommerce model to WordPress." style="font-size: 12px;">
+                                    Export Data To WooCommerce
+                                    <!-- Question mark icon inside button -->
+                                    <i class="fa fa-question-circle"></i>
+                                    <!-- Tooltip for the question mark -->
+                                </button>
+                            </div>
+                        </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

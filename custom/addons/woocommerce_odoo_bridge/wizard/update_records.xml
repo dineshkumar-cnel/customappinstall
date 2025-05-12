@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="woocommerce_update_form_display_hwe" model="ir.ui.view">
+            <field name="name">woocommerce.update.wizard.form</field>
+            <field name="model">woocommerce.update.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Woocommerce Update" create="1">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="instance_id" widget="selection" domain="[('state', '=', 'connected')]"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="update_records" type="object"
+                                string="Update" class="btn-info"/>
+                        <button string="Cancel" class="btn-secondary"
+                                special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

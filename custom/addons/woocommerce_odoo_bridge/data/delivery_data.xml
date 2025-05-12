@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+            <!-- Basic products for delivery types -->
+        <record id="product_product_flat_delivery_hwe" model="product.product">
+            <field name="name">Flat rate</field>
+            <field name="default_code">flat_rate</field>
+            <field name="description">Lets you charge a fixed rate for shipping.</field>
+            <field name="type">service</field>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">0.0</field>
+            <field name="invoice_policy">order</field>
+        </record>
+        <record id="product_product_local_delivery_hwe" model="product.product">
+            <field name="name">Local rate</field>
+            <field name="default_code">local_rate</field>
+            <field name="description">Free shipping is a special method which can be triggered</field>
+            <field name="type">service</field>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">0.0</field>
+            <field name="invoice_policy">order</field>
+        </record>
+        <record id="product_product_woocommerce_free_delivery_hwe" model="product.product">
+            <field name="name">Free Shipping</field>
+            <field name="default_code">local_rate</field>
+            <field name="type">service</field>
+            <field name="description">Allow customers to pick up orders themselves. By default, when using local pickup store base taxes will apply regardless of customer address.</field>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">0.0</field>
+            <field name="invoice_policy">order</field>
+        </record>
+        <record id="product_product_woocommerce_other_hwe" model="product.product">
+            <field name="name">Woocommerce Other</field>
+            <field name="default_code">woocommerce_other</field>
+            <field name="type">service</field>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">0.0</field>
+            <field name="invoice_policy">order</field>
+        </record>
+    </data>
+</odoo>

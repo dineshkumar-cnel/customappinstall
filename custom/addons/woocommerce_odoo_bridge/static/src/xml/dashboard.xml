@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Actions -->
+
+<templates id="templatettt" xml:space="preserve">
+    <t t-name="WooCommerceDashboard">
+         <div class="dashboards">
+            <div class="fluid-container my-5 o_hr_dashboard"/>
+        </div>
+    </t>
+	<t t-name="WooCommerceGraphs">
+        <div id="instanceifzerocount" style="display: none;">
+        <div id="popup" class="popup-container">
+            <div class="popup-content" style="margin-top: 40px;">
+                <div class="instructions">
+                <ul>
+                
+                   <h2 style="color: wheat; font-size: 35px; font-weight: 700; text-align: center;"> WooCommerce Connection Instructions </h2>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Navigate to the Connection Page:</span>
+                        By navigating to the Connection page and clicking the 'New' button, the WooCommerce Connection Form will open.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Enter Connection Name:</span>
+                        In the 'Connected WordPress Store Name' field, enter the name you have chosen for your connection.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Access WooCommerce Settings:</span>
+                        Next, go to the Settings page in WooCommerce within WordPress, click on the 'Advanced' tab, then select 'REST API'.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Create a New API:</span>
+                        From there, click 'Add API' to create a new API.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Add Consumer Key:</span>
+                        Then add the consumer key to the consumer key field of the model.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Add Consumer Secret Key:</span>
+                        Then add the Consumer Secret key to the Consumer Secret key field of the model.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Enter Website URL:</span>
+                        Next, go to the WordPress settings page and add the site address (URL) to the 'Website URL' field in the connection form.
+                    </li>
+                    <li>
+                    <span style="color: white; font-weight: 700; font-size: 20px">Save the Settings:</span>
+                        Afterward, click the 'Save' button in the top header, and a 'Website Connected' message will appear in the status.
+                    </li>
+                    </ul>
+                </div>
+                <div class="popup-image" 
+                     style="margin: auto; width: 80%; border-style: outset; border-color: black; border-width: 30px; position: relative; margin-top: 70px;">
+                    <img src="woocommerce_odoo_bridge/static/description/assets/icons/gif_image.gif" 
+                         style="height: 90%; width: 100%; margin: auto;"/>
+                </div>
+                <div class="popup-button" style="text-align: center; margin-top: 50px; margin-bottom: 40px;">
+                    <button t-on-click="redirectToMenu" class="get-start-btn">SET UP FIRST CONNECTION</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="instanceifnotzerocount" style="display: none;">
+        <div class="owl-carousel owl-theme o_hr_dashboard2">
+            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                <div class="dashboard-wrapper">
+                    <div class="row" style="margin:0px">
+                        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                            <div class="">
+                                <div class="row account-info" style="margin-top:25px" id="set">
+                                    
+                                    <div class="col-md-4">
+                                        <div class="tile wide invoice box-1" id="products_main">
+                                            <div class="headings" id="product_div">
+                                                <div class="left-header">
+                                                </div>
+                                                <div class="right-header">
+                                                <img src="woocommerce_odoo_bridge/static/description/assets/icons/pro1.png" style="height: 48px; width: 48px;"/>
+                                                </div>
+
+                                                <div id="monthly_income" class="count_of_instances">
+                                                    <div class="main-title" id="tit_instance">Products</div>
+                                                    <div class="start-sync-btn">
+                                                    <button t-on-click="onViewProducts" class="btn btn-primary" id="product_button">Start Sync</button>
+                                                    </div>
+                                                    <div class="product_right" id="product_right" style="float: right;padding-right: 50px;font-size: 50px;font-weight: bold;margin-top: -67px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="tile wide invoice box-1" id="orders_main">
+                                            <div class="headings" id="order_div">
+                                                <div class="left-header">
+                                                    
+                                                </div>
+                                                <div class="right-header">
+                                                <img src="woocommerce_odoo_bridge/static/description/assets/icons/5.png" style="height: 48px; width: 48px;"/>
+                                                </div>
+                                                <div id="monthly_income" class="count_of_instances">
+                                                    <div class="main-title" id="tit_instance">Orders</div>
+                                                    <div class="order_right" id="order_right" style="float: right;padding-right: 50px;font-size: 50px;font-weight: bold;margin-top: -67px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="tile wide invoice box-1" id="customers_main">
+                                            <div class="headings" id="partner_div">
+                                                <div class="left-header">
+                                                    
+                                                </div>
+                                                <div class="right-header">
+                                                <img src="woocommerce_odoo_bridge/static/description/assets/icons/cust.png" style="height: 48px; width: 48px;"/>
+                                                </div>
+                                                <div id="monthly_income" class="count_of_instances">
+                                                    <div class="main-title" id="tit_instance">Customers</div>
+                                                    <div class="partner_right" id="partner_right" style="float: right; padding-right: 50px; font-size: 50px; font-weight: bold; margin-top: -67px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 px-4" id="">
+           
+                <div class="year_to_date_chart_div col-sm-12 col-md-6 my-4">
+                    <div class="chart-wrapper card-shadow-effect" id="tiles">
+                        <div style="height: 20px; max-height: 20px;"
+                             class="d-flex justify-content-between align-items-center">
+                            <h2 style="color: #71639e;">Products</h2>
+                         <div>
+                               <div class="search">
+                                  <input id="product_search" type="text" class="searchTerm"
+                                         placeholder="Product Search.....">
+                                  </input>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="aaa" style='height:543px;display:block;overflow:scroll; margin-top: 16px;'>
+                             <table  class="table table-hover" id="product_table" >
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h2>#</h2>
+                                        </th>
+                                        <th>
+                                            <h2>Product Name</h2>
+                                        </th>
+                                        <th>
+                                            <h2 >Quantity</h2>
+                                        </th>
+                                        <th>
+                                            <h2 >Price</h2>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="product_body"  id="product_body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="year_to_date_chart_div col-sm-12 col-md-6 my-4">
+                    <div class="chart-wrapper card-shadow-effect" id="tiles">
+                        <div style="height: 20px; max-height: 20px;"
+                             class="d-flex justify-content-between align-items-center">
+                            <h2 style="color: #71639e;">Recent Orders</h2>
+                            <div>
+                               <div class="search">
+                                  <input id="order_search" type="text" class="searchTerm"
+                                         placeholder="Order Search.....">
+                                  </input>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="aaa" style='height:543px;display:block;overflow:scroll; margin-top: 16px;'>
+                            <table class="table table-hover" id="orders_table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h2>Number</h2>
+                                        </th>
+                                        <th>
+                                            <h2 >Order Date</h2>
+                                        </th>
+                                        <th>
+                                            <h2 >Customer</h2>
+                                        </th>
+                                        <th>
+                                            <h2>Total</h2>
+                                        </th>
+                                        <th>
+                                            <h2>Status</h2>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="orders_body" id="orders_body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+    </t>
+
+</templates>

@@ -1,0 +1,708 @@
+<div
+    style="background-color: #714B67; height: 290px; width: 100%; padding: 15px; position: relative;">
+    <!-- TITLE BAR -->
+    <div class="d-flex align-items-center justify-content-between"
+        style="border-bottom: 4px solid #470536; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div
+                style="color: #d812a3; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                class="mr-2">
+                <i class="fa fa-check mr-1"></i>Enterprise
+            </div>
+            <div
+                style="color: #9b1e48; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                class="mr-2">
+                <i class="fa fa-check mr-1"></i>Community
+            </div>
+            <div
+                style="color: #099e36; font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: bold; background-color: white; display: inline-block; padding: 3px 10px; border-radius: 50px;"
+                class="mr-2">
+                <i class="fa fa-check mr-1"></i>Odoo.sh
+            </div>
+        </div>
+
+        <img src="assets/misc/cnel-logo.png" width="42" height="42"
+            style="width: 42px; height: 42px;" />
+    </div>
+    <!-- END OF TITLE BAR -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!-- APP HERO -->
+                <h1
+                    style="color: #FFFFFF; font-weight: bolder; font-size: 50px; text-align: center; margin-top: 50px;">
+                    WooCommerce Odoo Bridge</h1>
+                <p
+                    style="color:#FFFFFF; padding: 8px 15px; text-align: center; font-size: 24px;">
+                    Current WooCommerce Odoo Instance Bridge</p>
+                <!-- END OF APP HERO -->
+                <!-- <img src="assets/screenshots/hr.gif" class="img-responsive"
+                     style="width: 100%; margin-left: auto; margin-right: auto;"/> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- GENERAL VIEW SECTION -->
+<div class="d-flex align-items-center"
+    style="border-bottom: 2px solid #714B67; padding: 15px 0px;"
+    id="overview">
+    <div class="d-flex justify-content-center align-items-center mr-2"
+        style="background-color: #F5F5F5; border-radius: 0px; width: 40px; height: 40px;">
+        <img src="assets/misc/pie-chart.png"
+            style="width: auto;height: 30px;" />
+    </div>
+    <h2 class="mt-2"
+        style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: bold;">
+        General view
+    </h2>
+</div>
+<div class="row"
+    style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; line-height: 200%;">
+    <div class="col-sm-12 py-4">
+        The WooCommerce instance serves as an online product selling platform,
+        allowing merchants to create, manage, and sell products directly to
+        customers.
+        WooCommerce provides an intuitive interface for customers to browse and
+        purchase products,
+        while also handling payments, inventory, shipping, and customer
+        management.
+
+        In this setup, Odoo functions as the backend system, which integrates
+        seamlessly with WooCommerce. By linking WooCommerce with Odoo,
+        the platform can streamline and automate various business processes.
+        Odoo is widely known for its comprehensive suite of business
+        applications,
+        including inventory management, accounting, sales, customer relationship
+        management (CRM),
+        manufacturing, and more.
+
+        This integration module connects WooCommerce to Odoo, allowing Odoo to
+        manage
+        and synchronize essential business data across both platforms. Here's
+        how the integration works:
+        <h5>Benefits of the Integration:</h5>
+        <ul>
+            <li><strong>Centralized Management:</strong> By linking WooCommerce
+                with Odoo, all business processes—ranging from inventory
+                management to order fulfillment and customer service—can be
+                managed in one place. This reduces manual work, minimizes
+                errors, and provides better visibility into overall
+                operations.</li>
+            <li><strong>Efficient Order Processing:</strong> With the
+                integration, once an order is placed on WooCommerce, it is
+                automatically transferred to Odoo. This ensures quicker
+                processing, more accurate invoicing, and better tracking of
+                order status.</li>
+            <li><strong>Improved Customer Experience:</strong> Synchronizing
+                customer information between both platforms ensures that
+                customers receive accurate updates regarding their orders,
+                inventory status, and shipping details. This improves
+                communication and enhances the overall customer experience.</li>
+            <li><strong>Data Accuracy and Consistency:</strong> The integration
+                ensures that product, customer, and order data remains
+                consistent across both platforms. This reduces the risk of
+                discrepancies and prevents situations where inventory or pricing
+                information might differ between WooCommerce and Odoo.</li>
+        </ul>
+
+    </div>
+    <div class="col-sm-12 py-4" style="margin-top: -35px">
+        Before installing the module, you must first install the following
+        Python packages:
+        'WooCommerce' and 'numpy'
+        You can install these packages using the commands provided below:
+    </div>
+    <div class="col-sm-12 py-4" style="margin-top: -35px">
+        You need to run these commands in the Command Prompt on your PC. Update
+        the path
+        C:\Odoo17\python\python.exe based on your Odoo installation directory.
+    </div>
+    <div class="col-sm-12 py-4" style="margin-top: -22px;">
+        <mark style="background-color: #71639e; color: white;">
+            C:\Odoo17\python\python.exe -m pip install woocommerce<br>
+        </mark>
+        <mark style="background-color: #71639e; color: white;">
+            C:\Odoo17\python\python.exe -m pip list | findstr woocommerce<br>
+        </mark>
+        <mark style="background-color: #71639e; color: white;">
+            C:\Odoo17\python\python.exe -m pip install numpy<br>
+        </mark>
+        <mark style="background-color: #71639e; color: white;">
+            C:\Odoo17\python\python.exe -m pip list | findstr numpy
+        </mark>
+
+    </div>
+    <div class="col-sm-12 py-4" style="margin-top: -22px;">
+        <mark style="background-color: #71639e; color: white;">
+            WooCommerce : pip3 install WooCommerce==3.0.0
+        </mark>
+    </div>
+    <div class="col-sm-12 py-4">
+        <div class="col-sm-12 py-4" style="margin-top: -65px;">
+            <mark style="background-color: #71639e; color: white;">
+                numpy : pip install numpy
+            </mark>
+        </div>
+        <div class="col-sm-12 py-4" style="margin-top: -22px;">
+            If you are using Odoo SH, you can deploy our WooCommerce module
+            along with a requirements.txt file. Please include the following
+            code in the requirements.txt file:
+        </div>
+        <mark style="background-color: #71639e; color: white;">
+            WooCommerce==3.0.0
+        </mark>
+        <br />
+        <mark style="background-color: #71639e; color: white;">numpy</mark>
+    </div>
+    <!-- END OF GENERAL VIEW SECTION -->
+
+    <!-- QUALITIES SECTION -->
+    <div class="d-flex align-items-center"
+        style="border-bottom: 2px solid #714B67; padding: 15px 0px;"
+        id="features">
+        <div class="d-flex justify-content-center align-items-center mr-2"
+            style="background-color: #F5F5F5; border-radius: 0px; width: 40px; height: 40px;">
+            <img src="assets/misc/features.png"
+                style="width: auto;height: inherit;" />
+        </div>
+        <h2 class="mt-2"
+            style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: bold;">
+            <!-- Qualities -->
+            Qualities
+        </h2>
+    </div>
+    <div class="row"
+        style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; line-height: 200%;">
+        <div class="col-sm-12 col-md-6">
+            <div class="d-flex align-items-center"
+                style="margin-top: 40px; margin-bottom: 40px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">Community
+                    &amp;
+                    Enterprise Support.</span>
+            </div>
+
+            <div class="d-flex align-items-center"
+                style="margin-top: 30px; margin-bottom: 30px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">User
+                    friendly Dashboard</span>
+            </div>
+            <div class="d-flex align-items-center"
+                style="margin-top: 30px; margin-bottom: 30px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">Sync
+                    functionality helps to sync needed data at the time.</span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+
+            <div class="d-flex align-items-center"
+                style="margin-top: 30px; margin-bottom: 30px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">Available
+                    in Odoo 17.0
+                    Community and Enterprise.</span>
+            </div>
+
+            <div class="d-flex align-items-center"
+                style="margin-top: 30px; margin-bottom: 30px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">It
+                    helps to create instance in simple way.</span>
+            </div>
+
+            <div class="d-flex align-items-center"
+                style="margin-top: 30px; margin-bottom: 30px">
+                <img src="assets/misc/check-box.jpg"
+                    style="width: auto;height: 40px;" class="mr-2" />
+                <span
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">Operations
+                    can be done both sides</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- END OF QUALITIES SECTION -->
+
+    <!-- CAPTURES SECTION -->
+    <div class="d-flex align-items-center"
+        style="border-bottom: 2px solid #714B67; padding: 15px 0px;"
+        id="screenshots">
+        <div class="d-flex justify-content-center align-items-center mr-2"
+            style="background-color: #F5F5F5; border-radius: 0px; width: 40px; height: 40px;">
+            <img src="assets/misc/pictures.png"
+                style="width: inherit;height: 30px;" />
+        </div>
+        <h2 class="mt-2"
+            style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: bold;">
+            Screen Captures
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    1.Dashboard Panels
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    Users can click the tiles to view detailed information about
+                    the corresponding WooCommerce property.</p>
+                <img src="assets/screenshots/Odoo-Dashboard.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    We need to create a WooCommerce instance to function as the
+                    connector.
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    In the screenshot below, you can see several fields.
+                    To create an instance, you need to provide the store URL,
+                    consumer key, consumer secret, username, and password.
+                    These credentials are essential.</p>
+                <img src="assets/screenshots/woo_connection.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Store Web Address
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    The Store Web Address can be found in the WooCommerce
+                    settings.</p>
+                <img src="assets/screenshots/woo_store_url.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Generating an API Key
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    To generate the API key for the credentials,
+                    follow the steps below and ensure that the API key
+                    is specifically set with Read/Write permissions.</p>
+                <img src="assets/screenshots/api1.png" class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    API Key Display
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    By generating API credentials, you will obtain a key
+                    similar to the one shown
+                    below.</p>
+                <img src="assets/screenshots/api.png" class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Overview View.
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    The created instance can be viewed in the overview menu,
+                    where you can perform specific operations
+                    based on conditions.</p>
+                <img src="assets/screenshots/woo_overview.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Operations Wizard Interface.
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    When you click on an operation, a wizard will appear as
+                    shown below.
+                    In this wizard, you can import and export specific data.
+                    Use the Sync Details button to synchronize data between
+                    both instances.</p>
+                <img src="assets/screenshots/woo_wizard.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Product Import Process
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    Products can be imported from the WooCommerce
+                    instance to Odoo by selecting the products checkbox
+                    and clicking Import.</p>
+                <img src="assets/screenshots/woo_wiz_import_products.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Test Product
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    A product has been created in WooCommerce for testing the
+                    import process.</p>
+                <img src="assets/screenshots/woo_products.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Imported Product.
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    The imported product will appear as shown in the image below
+                    in
+                    Odoo.</p>
+                <img src="assets/screenshots/woo_imp_prd.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Product Export Process
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    Products can be exported to WooCommerce by selecting the
+                    product checkbox and
+                    clicking the Export button, as shown below.</p>
+                <img src="assets/screenshots/woo_wiz_exp_products.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Exported Product View.
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    These are the products that need to be exported to
+                    WooCommerce.</p>
+                <img src="assets/screenshots/woo_inv_prdcts.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Woocommerce Product View
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    In below image we can see the exported product from
+                    odoo.</p>
+                <img src="assets/screenshots/woo_exp_prdcts_view.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Odoo Woocommerce Product View
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    In Woocommerce module there is menu name Products there we
+                    can see the product which having in the woo instance like
+                    below.</p>
+                <img src="assets/screenshots/woo_exp_prdcts_knb.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Customers Import Process
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    Customers can be import from woocommerce like products.</p>
+                <img src="assets/screenshots/woo_wiz_imp_part.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Woocommerce Customer View
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    By importing this customer record from woo will be import
+                    into odoo.</p>
+                <img src="assets/screenshots/woo_customer_web_view.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Odoo Woocommerce Partner View
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    It will import to odoo and create a partner record just
+                    like below.</p>
+                <img src="assets/screenshots/woo_imp_part_ex.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Orders Import Process
+                </h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    For orders, we offer both import and export options, as well
+                    as a date
+                    filter specifically for orders.</p>
+                <img src="assets/screenshots/orderss.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Woocommerce Orders View</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    By importing orders this record from woocommerce will get
+                    as sale order in odoo.</p>
+                <img src="assets/screenshots/woo_order_web_view.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Odoo Woocommerce Orders View</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    The imported order record form will look like below.</p>
+                <img src="assets/screenshots/woo_ord_form_view.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Woocommerce Orders View</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    If we change order state in the woocommerce like below.</p>
+                <img src="assets/screenshots/woo_web_ord_state.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Odoo Woocommerce Order View</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    Then we need to set that changes in the odoo for changing
+                    below image field.</p>
+                <img src="assets/screenshots/woo_order_form_page.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Operation Import Wizard Sync Process</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    To sync details from WooCommerce into Odoo, use the
+                    "Import Sync Details"
+                    button in the Operation Wizard.
+                </p>
+                <img src="assets/screenshots/woo_wiz_sync_button.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Operation Export Wizard Sync Process</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    To sync details from Odoo into WooCommerce, use the
+                    "Export Sync Details"
+                    button in the Operation Wizard.
+                </p>
+                <img src="assets/screenshots/export_sync.png"
+                    class="img-thumbnail">
+            </div>
+
+            <div style="display: block; margin: 30px auto;">
+                <h3
+                    style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold;">
+                    Update Product and Customer Information on WooCommerce Based
+                    on Odoo</h3>
+                <p
+                    style="font-weight: 400; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+                    When you update a record in Odoo, it will automatically
+                    update the corresponding
+                    record in WooCommerce as well.</p>
+                <img src="assets/screenshots/woo_product_dlt.png"
+                    class="img-thumbnail">
+            </div>
+            <div
+                style="display: block; margin: 30px Report on Object Introspection;">
+                <img src="assets/screenshots/woo_arch_product.png"
+                    class="img-thumbnail">
+            </div>
+
+        </div>
+    </div>
+    <div class="d-flex align-items-center"
+        style="border-bottom: 2px solid #714B67; padding: 15px 0px;">
+        <div class="d-flex justify-content-center align-items-center mr-2"
+            style="background-color: #F5F5F5; border-radius: 0px; width: 40px; height: 40px;">
+            <i class="fa fa-ban" aria-hidden="true"
+                style="font-size: 30px;"></i>
+        </div>
+        <h2 class="mt-2"
+            style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: bold;">
+            Our App Limitation
+        </h2>
+    </div>
+
+    <!-- New section with bullet points -->
+    <div class="mt-4" style="font-family: 'Montserrat', sans-serif;">
+        <p style="font-size: 18px; color: #333; line-height: 1.6;">
+            We are currently working on the following features and improvements
+            for the app:
+        </p>
+        <ul
+            style="font-size: 16px; color: #333; line-height: 1.6; padding-left: 20px;">
+            <li>Currently, WooCommerce does not import images and prices for
+                variation products. This feature will be implemented
+                soon.</li><br>
+            <li>We are working on enabling automatic synchronization, which will
+                be done via webhooks.</li><br>
+            <li>Product images are not being exported from Odoo to WooCommerce.
+                This issue will also be resolved shortly.</li><br>
+        </ul>
+        <p style="font-size: 16px; color: #333;">
+            All other functionalities are working fine, so please feel free to
+            enjoy the app.</p>
+        <p style="font-size: 16px; color: #333;">
+            Thank you for your patience! Stay tuned for these exciting updates.
+        </p>
+
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="d-flex align-items-center"
+        style="border-bottom: 2px solid #714B67; padding: 15px 0px;">
+        <div class="d-flex justify-content-center align-items-center mr-2"
+            style="background-color: #F5F5F5; border-radius: 0px; width: 40px; height: 40px;">
+            <img src="assets/misc/customer-support.png"
+                style="height: inherit;width: inherit;" />
+        </div>
+        <h2 class="mt-2"
+            style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: bold;">
+            Guidance
+        </h2>
+    </div>
+    <div class="container mt-5"
+        style="margin-top: 0px !important; background-color: #714B67;">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-sm-12 col-md-6">
+                <div
+                    style="background-color: #F6F8F9; padding: 30px; display: flex; align-items: center;">
+                    <div
+                        class="mr-4 d-flex justify-content-center align-items-center"
+                        style="display: inline-block; height: 70px; width: 70px; display: flex; align-items: center; justify-content: center; margin-right: 70px;">
+                        <img src="assets/misc/support.png" height="48"
+                            width="48" style="width:75px; height:75px;" />
+                    </div>
+                    <div>
+                        <h4>Looking for help?</h4>
+                        <p style="line-height: 100%;">Got questions or need
+                            help? Don’t hesitate to
+                            contact us.</p>
+                        <a href="mailto:info@cnelindia.com">
+                            <p
+                                style="font-weight: 400; font-size: 28px; line-height: 80%; color: #714B67;">
+                                info@cnelindia.com</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div
+                    style="background-color: #F6F8F9; padding: 30px; display: flex; align-items: center;">
+                    <div
+                        class="mr-4 d-flex justify-content-center align-items-center"
+                        style="display: inline-block; height: 70px; width: 70px; display: flex; align-items: center; justify-content: center;  margin-right: 70px;">
+                        <img src="assets/misc/whatsapp.png" height="52"
+                            width="52" style="width: 52px; height: 52px;" />
+                    </div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p style="line-height: 100%;">Reach out to us on
+                            WhatsApp!</p>
+                        <a
+                            href="api.whatsapp.com/send?phone=918606827707">
+                            <p
+                                style="font-weight: 400; font-size: 28px; line-height: 80%; color: #714B67;">
+                                +91 9983345001</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 my-5 d-flex flex-column justify-content-center align-items-center">
+                <!-- <a href="https://cnelindia.com" target="_blank"> -->
+                    <img src="assets/misc/logo.png" width="144" height="31" style="width: 80px; height: auto; margin-top: 40px;" />
+                    <span style="margin-top:10px; font-weight:800;color: white;font-size: 25px;">CnEL India</span>
+                <!-- </a> -->
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+<!-- END OF SUPPORT -->

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="job_cron_form_view_hwe" model="ir.ui.view">
+            <field name="name">job.cron.form</field>
+            <field name="model">job.cron</field>
+            <field name="arch" type="xml">
+                <form string="Job Cron" duplicate="0">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Details">
+                                <field name="instance_id"/>
+                                <field name="function"/>
+                                <field name="description"/>
+                                <field name="state"/>
+                            </group>
+                        </group>
+<!--                        <notebook>-->
+<!--                            <page string="Other Information">-->
+<!--                                <field name="data"/>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="job_cron_tree_view_hwe" model="ir.ui.view">
+            <field name="name">job.cron.tree</field>
+            <field name="model">job.cron</field>
+            <field name="arch" type="xml">
+                <tree string="Job Cron" default_order="create_date desc">
+                    <field name="function"/>
+                    <field name="description"/>
+                    <field name="create_date"/>
+                    <field name="instance_id"/>
+                    <field name="state" widget="badge"
+                           decoration-danger="state == 'fail'"
+                           decoration-success="state == 'done'"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_job_cron_menu_hwe" model="ir.actions.act_window">
+            <field name="name">Task Scheduler</field>
+            <field name="res_model">job.cron</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'create': False,'edit':False}</field>
+            <field name="help" type="html">
+                <p class="empty-folder-view">
+                    Create Task Scheduler Records
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="job_cron_submenu_hwe" name="Woo Logs"
+                  parent="woocommerce_odoo_bridge.woo_commerce_menu"
+                  sequence="102"
+                  action="action_job_cron_menu_hwe"
+                  groups="base.group_user"/>
+
+    </data>
+</odoo>

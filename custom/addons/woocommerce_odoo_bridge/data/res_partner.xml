@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="fetch_and_sync_partners_hwe" model="ir.actions.server">
+            <field name="name">Export/Update to Woocommerce</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="binding_view_types">form,list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.sync_customers()</field>
+        </record>
+    </data>
+    <record id="woocommerce_guest_hwe" model="res.partner">
+        <field name="name">Guest User Woocommerce</field>
+    </record>
+    <!-- Basic product for woocommerce coupon program -->
+    <record id="woocommerce_coupons_hwe" model="product.template">
+        <field name="name">Coupons Woocommerce</field>
+        <field name="detailed_type">service</field>
+        <field name="purchase_ok" eval="False"/>
+    </record>
+    <!-- Basic product for woocommerce fee lines -->
+    <record id="woocommerce_fee_lines_hwe" model="product.template">
+        <field name="name">Fee Lines Woocommerce</field>
+        <field name="detailed_type">service</field>
+        <field name="purchase_ok" eval="False"/>
+    </record>
+</odoo>
